@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+div{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+button{
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+.red{
+    background-color: red;
+}
+.white{
+    background-color: white;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: yellow;
+}
