@@ -1,0 +1,12 @@
+body {
+    height: 100vh;
+    margin: 0;
+  }
+
+  div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+  }
