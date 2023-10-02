@@ -11,7 +11,7 @@ class DrawingApp {
         this.canvas.height = window.innerHeight;
         this.ctx = this.canvas.getContext('2d')
         this.ctx.strokeStyle = "white"; //defaultowo jest czarna więc nie byłoby nic widać i trzeba zrobić biały
-        this.ctx.lineWidth = 5;
+        this.ctx.lineWidth = 30;
         this.ctx.lineCap = 'round';
         
     }
