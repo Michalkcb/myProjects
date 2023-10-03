@@ -1,0 +1,32 @@
+body {
+    display: flex;
+   }
+ 
+   div {
+    flex-grow: 1;
+    height: 50px;
+    cursor: pointer;
+    margin: 20px;
+    border: 2px solid black;
+ 
+   }
+ 
+   .orange {
+    background-color: orange;
+   }
+ 
+   .green {
+    background-color: green;
+   }
+ 
+   .blue {
+    background-color: blue;
+   }
+ 
+   .yellow {
+    background-color: yellow;
+   }
+ 
+   .red {
+    background-color: red;
+   }

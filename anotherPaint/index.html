@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Another Paint in Canvas</title>
-
-</head>
-<body>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box">
+        <div class="toolbox">
+          <button class="toolbox__btn" id="new-project">Nowy</button>
+          <input class="toolbox__number" id="size" type="number" />
+          <input class="toolbox__color" id="color" type="color" />
+        </div>
+        <canvas id="canvas"></canvas>
+      </div>
+    </div>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
