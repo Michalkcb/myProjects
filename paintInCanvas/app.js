@@ -44,7 +44,7 @@ class DrawingApp {
   #draw(e) {
     if (!this.painting) return;
     console.log("rysowanie");
-    this.ctx.beginPath(); //kończy starą i zaczyna nową ścieżkę
+    // this.ctx.beginPath(); //kończy starą i zaczyna nową ścieżkę
     console.log(e);
 
     let x = e.clientX || e.touches[0].clientX;
@@ -53,7 +53,7 @@ class DrawingApp {
 
     this.ctx.lineTo(x, y);
     this.ctx.stroke();
-    this.ctx.beginPath();
+    // this.ctx.beginPath();
     this.ctx.moveTo(x, y);
   }
 
