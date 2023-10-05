@@ -1,5 +1,3 @@
-
-
 const form = document.querySelector('form');
 const ul = document.querySelector('ul');
 const taskNumber = document.querySelector('h2 span');
@@ -10,14 +8,12 @@ const renoveTask = (e) => {
 e.target.parentNode.remove();
 taskNumber.textContent = listItems.length;
 }
-
 //dodawanie zadania
 const addTask = (e) => {
   e.preventDefault();
   const titleTask = input.value;
   if (titleTask === '') return; 
   const task = document.createElement('li');
-
   task.className = 'task';
   task.textContent = titleTask;
   task.innerHTML = titleTask + "<button>Usuń</button>";
