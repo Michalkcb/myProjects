@@ -15,7 +15,6 @@
     background-color: red;
     position: relative;
     top: 150px;
-    animation: jump 1s infinite;
 }
 #block{
     width: 20px;
@@ -24,9 +23,11 @@
     position: relative;
     top: 130px;
     left: 480px;
+    animation: block 1s infinite linear;
+
 }
 .animate{
-    animation: block 1s;
+    animation: jump 1s;
 }
 @keyframes block {
     0%{left: 480px;}
