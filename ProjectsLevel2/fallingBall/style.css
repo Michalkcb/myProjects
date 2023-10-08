@@ -15,7 +15,7 @@
     background-color: red;
     border-radius: 50%;
     position: relative;
-    top: 400px;
+    top: 450px;
     left: 190px;
     z-index: 1000000;
 }
@@ -33,5 +33,6 @@
     background-color: white;
     position: relative;
     top: 100px;
-    margin-top: -20px;
+    margin-top: -20px;    z-index: 1;
+
 }
