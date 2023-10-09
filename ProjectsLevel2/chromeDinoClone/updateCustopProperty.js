@@ -6,6 +6,6 @@ export function setCustomProperty(element, property, value){
     element.style.setProperty(property, value)
 }
 
-export function incrementCustomProperty(element, property, value){
-    setCustomProperty(element, property, getCustomProperty(element, property) + inc)
+export function incrementCustomProperty(element, property, increment){
+    setCustomProperty(element, property, getCustomProperty(element, property) + increment)
 }

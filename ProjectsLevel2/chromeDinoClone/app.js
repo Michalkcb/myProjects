@@ -1,29 +1,57 @@
-import { updateGround } from './ground.js';
+import { updateGround, setupGround } from './ground.js';
 
 const world_width = 100
 const world_height = 30
+const speedScaleIncrease = 0.00001
 
 const worldElement = document.querySelector('[data-world]');
+const scoreElement = document.querySelector('[data-score]');
+const startScreenElement = document.querySelector('[data-start-screen]');
 
 
 
 setPixelToWorldScale()
 window.addEventListener('resize', setPixelToWorldScale);
+document.addEventListener('keydown', handleStart, {once: true});
+
 
 let lastTime
+let speedScale
+let score
 function update(time) {
-    if (lastTime === null) {
+    if (lastTime == null) {
         lastTime = time;
         window.requestAnimationFrame(update)
         return;
     }
     const timeDelta = time - lastTime;
-    updateGround(timeDelta);
+    updateGround(timeDelta, speedScale);
+    updateSpeedScale(timeDelta);
+    updateScore(timeDelta);
+
     lastTime = time;
 window.requestAnimationFrame(update);
 }
 
-window.requestAnimationFrame(update);
+function updateSpeedScale(timeDelta) {
+    speedScale += timeDelta * speedScaleIncrease;
+}
+
+function updateScore(timeDelta) {
+    score += timeDelta * 0.01;
+    scoreElement.textContent = Math.floor(score);
+
+}
+
+function handleStart(e) {
+    lastTime = null;
+    speedScale = 1;
+    score = 0;
+    setupGround()
+    startScreenElement.classList.add("hide");
+    window.requestAnimationFrame(update);
+
+}
 
 function setPixelToWorldScale() {
     let worldToPixelScale
