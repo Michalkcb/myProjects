@@ -40,7 +40,7 @@ function updateSpeedScale(timeDelta) {
 }
 
 function updateScore(timeDelta) {
-    score += timeDelta * 0.02;
+    score += timeDelta * 0.01;
     scoreElement.textContent = Math.floor(score);
 
 }
