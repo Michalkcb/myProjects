@@ -32,6 +32,12 @@ export function updateCactus(timeDelta, speedScale) {
     nextCactusTime -= timeDelta
 }
 
+export function getCactusRectangle(){
+    return [...document.querySelectorAll('[data-cactus]')].map(cactus => {
+        return cactus.getBoundingClientRect()
+    })
+}
+
 function createCactus(){
     const cactus = document.createElement("img")
     cactus.dataset.cactus = "true"
