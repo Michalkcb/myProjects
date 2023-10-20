@@ -1,20 +1,27 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-
 body{
-    width: 100vw;
-    height: 100vh;    
-    display: flex;
-    background-color: black;
+    background-color: gray;
+    margin: 0;
     color: white;
+    height:  100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 2rem;
     .wrapper{
         background-color: blue;
         padding: 2rem;
-        line-height: 2.5rem;
-        width: 20rem;
+        border-radius: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        form{
+            display: grid;
+            grid-template-columns: auto auto ;
+
+            button{
+                grid-column:  span 2;
+            }
+
+        }
     }
 }
