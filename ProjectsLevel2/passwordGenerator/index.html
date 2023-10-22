@@ -10,13 +10,13 @@
   <body>
     <div class="wrapper">
       <h1>Password Generator</h1>
-      <h3 class="password">password</h3>
+      <h3 id="password">password</h3>
 
-      <form action="generator">
-        <label for="range" id="rangeBar">Number of characres</label>
+      <form action="generator" id="generatorForm">
+        <label for="range" id="number">Number of characres</label>
         <div>
           <input type="range" name="range" id="rangeInput" min="1" max="20" />
-          <input type="number" name="number" id="number" min="1" max="20" />
+          <input type="number" name="number" id="rangeBar" min="1" max="20" />
         </div>
         
         <label for="uppercase">Includes uppercase</label>
