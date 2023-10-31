@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import BannerImage from './../assets/pizza.jpeg'
+import '../styles/Home.css';
 
 function Home() {
   return (
