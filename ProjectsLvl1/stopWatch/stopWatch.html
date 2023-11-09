@@ -1,36 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
-    header>h1{
-        text-transform: uppercase;
-
-        text-align: center;
-        text-shadow: 5px 5px 5px rgb(0, 51, 255);
+  </head>
+  <style>
+    body {
+      background-color: #696666;
+      color: rgb(202, 251, 127);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 28px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
     }
-    .buttons{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+    .container{
+        border: 2px solid rgb(202, 251, 127);
+        border-radius: 1rem;
+        padding: 2rem;
+
+    }
+    header > h1 {
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: 5px 5px 5px rgb(0, 51, 255);
     }
 
-</style>
-<body>
+    .clock {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .pause,
+    .stop,
+    .reset {
+      display: flex;
+      border: none;
+      background-color:rgb(202, 251, 127);
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      height: 4rem;
+      width: 4rem;
+      box-shadow: 0 0 3rem 0.5rem rgb(202, 251, 127);
+      margin: 1rem;
+
+    }
+  </style>
+  <body> 
+    <div class="container">
     <header><h1>stop watch</h1></header>
     <main>
+        <div class="clock">
+          <div class="time">00:00:00</div>
+        </div>
         <div class="buttons">
-        <div class="pause">pause</div>
-        <div class="stop">stop</div>
-        <div class="reset">reset</div>
-    </div>
+          <button class="pause">pause</button>
+          <button class="stop">stop</button>
+          <button class="reset">reset</button>
+        </div>
+      </div>
     </main>
-
+</div>
     <script>
-
+        const time = document.querySelector('.time');
+        console.log(time);
     </script>
-    
-</body>
+  </body>
 </html>
