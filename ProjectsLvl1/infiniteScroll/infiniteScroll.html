@@ -14,34 +14,47 @@
             border-radius: 1rem;
             border: #050505 2px solid;
         }
-
+        img {
+            height: 300px;
+            width: 300px;
+            padding: 2rem;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
     </style>
 
 </head>
 <body>
 
-<div class="container"></div>
 
     <header><h1>infinite scroll</h1></header>
+<div class="container"></div>
+
     <script>
         const container = document.querySelector('.container')
-        const URL = 'https://api.multiavatar.com/'
+        const URL = 'https://picsum.photos/200/'
 
-        function grtRandNum() {
-            
+        const getRandNum =() => {
+            return Math.floor(Math.random() * 100)
         }
 
-        function loadImg(numImg  =10){
-            let i = 0;
-            while(i < numImg){
+        const loadImg = (numImg  =12) =>{
+            for(let i = 0; i < numImg; i++){
                 const img = document.createElement('img');
-                img.src = `${URL}${getRandomNum()}`
+                img.src = `${URL}${getRandNum()}`
                 container.appendChild(img);
-                i++
-
             }
         }
 
+        loadImg()
+
+        window.addEventListener('scroll', () =>{
+            if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight){
+                loadImg();
+            }
+        })
    </script>
 </body>
 </html>
