@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Page Scroll</title>
+    <style>
+        header > h1{
+            font-weight: 900;
+            text-transform: uppercase;
+            text-shadow: 5px 5px 5px #050505;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 1rem;
+            border: #050505 2px solid;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container"></div>
+
+    <header><h1>infinite scroll</h1></header>
+    <script>
+        const container = document.querySelector('.container')
+        const URL = 'https://api.multiavatar.com/'
+
+        function grtRandNum() {
+            
+        }
+
+        function loadImg(numImg  =10){
+            let i = 0;
+            while(i < numImg){
+                const img = document.createElement('img');
+                img.src = `${URL}${getRandomNum()}`
+                container.appendChild(img);
+                i++
+
+            }
+        }
+
+   </script>
+</body>
+</html>
