@@ -1,7 +1,9 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
+  "main": "index.js",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -36,7 +38,6 @@
     ]
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
   "devDependencies": {},
   "author": "",
   "license": "ISC"
